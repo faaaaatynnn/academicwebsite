@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In UiTM Student E-Profile</title>
+
+    <!-- Import Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background-image: url('images/peta2.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styling */
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 200px;
+            position: relative;
+        }
+
+        .left-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 150px;
+            height: auto;
+        }
+
+        .center-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        /* Title Styling */
+        .title {
+            font-family:'Righteous', sans-serif;
+            font-size: 3rem;
+            color: #2b0707;
+            text-transform: uppercase;
+             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            margin-top: 10px;
+        }
+
+        /* Wrapper for Login Form */
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 200px);
+            padding: 20px;
+        }
+
+        /* Login Form Styling */
+        form {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px 50px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #db7c7c;
+        }
+
+        .forgot-pass {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .forgot-pass a {
+            text-decoration: none;
+            color: #052d85;
+        }
+
+        .forgot-pass a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #db7c7c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff9a9a;
+            transform: scale(1.05);
+        }
+
+        .sign-link {
+            margin-top: 20px;
+        }
+
+        .sign-link a {
+            text-decoration: none;
+            color: #052d85;
+        }
+
+        .sign-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: rgba(0, 0, 0, 0.822);
+            color: white;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header-container">
+        <img src="images/logouitm.png" alt="UiTM Logo" class="left-logo">
+        <div class="center-content">
+            <img src="images/logo.png" alt="Profile Logo" class="profile-logo">
+            <div class="title" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">UiTM Student E-Profile</div>
+        </div>
+    </header>
+
+    <!-- Login Form -->
+    <div class="wrapper">
+        <form method="POST" action="index.html">
+            <h2>LOGIN</h2>
+            <div class="input-group">
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="forgot-pass">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="sign-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 UiTM Student E-Profile. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.querySelector('input[name="username"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+            const testUsername = "user";
+            const testPassword = "uitm123";
+            
+            if (username === testUsername && password === testPassword) {
+                window.location.href = "index.html"; 
+            } else {
+                alert("Invalid username or password!");
+            }
+        });
+    </script>
+</body>
+</html>

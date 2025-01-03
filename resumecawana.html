@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UiTM Student E-Profile</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Jost', sans-serif;
+      background-image: url('images/malaysia.png');
+      background-size: cover;
+      background-position: center top;
+      color: #333;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 5rem;
+      color: #333;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #1a1b1bb4;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+    .profile-info h1 {
+      font-size: 2.2rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .profile-info h2 {
+      font-size: 1.4rem;
+      color: #777;
+    }
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #1a1b1bb4;
+      border-bottom: 2px solid #1a1b1bb4;
+      padding-bottom: 5px;
+    }
+    .navbar-nav .nav-link {
+      text-decoration: none; 
+      color: #000;           
+      font-weight: 500;      
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #007bff;        
+      text-decoration: underline; 
+    }
+    .skills .skill {
+      background: #1a1b1bb4;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin: 5px;
+      width: 120px;
+      transition: transform 0.3s ease;
+    }
+    .skills .skill:hover {
+      transform: scale(1.1);
+    }
+    .back-button {
+      margin-top: 20px;
+      text-align: center;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .profile-info {
+        text-align: center;
+        margin-left: 0;
+      }
+      .profile-img {
+        width: 150px;
+        height: 150px;
+      }
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <img src="images/logouitm.png" alt="UiTM Logo" style="width: 150px; height: auto; margin-right: 10px;">
+  <img src="images/logo.png" alt="Profile Logo" style="width: 120px; height: auto; margin-right: 10px;">
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">UiTM E-Profile</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="index.html">Home</a></li>
+              <li><a class="dropdown-item" href="home.html">E-Profile</a></li>
+              <li><a class="dropdown-item" href="#">Course Outline</a></li>
+              <li><a class="dropdown-item" href="studentcard.html">Student Card</a></li>
+              <li><a class="dropdown-item" href="#">Resume</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="signin.html">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search by name" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Content -->
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-4 text-center">
+        <img src="images/ayucawana.png" alt="Profile Picture of Ayu Irsyawana" class="profile-img">
+      </div>
+      <div class="col-md-8 profile-info">
+        <h1>AYU IRSYAWANA IZZAH BINTI JA'AFAR</h1>
+        <h2>Marketing Specialist</h2>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h3 class="section-title">About Me</h3>
+      <p>I am a creative and results-driven marketing professional with a passion for digital marketing, social media strategies, and content creation. I specialize in developing effective campaigns that engage audiences, increase brand awareness, and drive sales.</p>
+    </div>
+    
+    <div class="section contact">
+      <h3 class="section-title">Contact Me</h3>
+      <a href="mailto:ayucawana@gmail.com"><i class="fas fa-envelope"></i>ayucawana@gmail.com</a>
+    </div>
+    
+    <div class="section">
+      <h3 class="section-title">Experience</h3>
+      <ul>
+        <li><strong>Marketing Specialist</strong> - Brand Agency (2027 - Present)</li>
+        <li><strong>Digital Marketing Intern</strong> - Social Media Agency (2025 - 2027)</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h3 class="section-title">Education</h3>
+      <ul>
+        <li><strong>Bachelor of Business Administration</strong> - UiTM Puncak Perdana (2024-2026)</li>
+      </ul>
+    </div>
+    
+    <div class="section skills">
+      <h3 class="section-title">Skills</h3>
+      <div class="d-flex flex-wrap">
+        <div class="skill">SEO</div>
+        <div class="skill">Social Media Marketing</div>
+        <div class="skill">Google Ads</div>
+        <div class="skill">Content Creation</div>
+        <div class="skill">Brand Strategy</div>
+        <div class="skill">Data Analysis</div>
+      </div>
+    </div>
+    
+    <div class="section interests">
+      <h3 class="section-title">Interests</h3>
+      <div>
+        <i class="fas fa-bullhorn"></i> Marketing Trends
+        <i class="fas fa-camera"></i> Photography
+        <i class="fas fa-travel"></i> Traveling
+        <i class="fas fa-music"></i> Music
+      </div>
+    </div>
+  </div>
+<!-- Back Button Section -->
+<div class="back-button">
+  <a href="index.html" class="btn btn-secondary">Back</a>
+</div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 UiTM Student E-Profile. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
