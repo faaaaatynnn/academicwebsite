@@ -1,0 +1,159 @@
+
+  /*index page*/
+  .righteous-regular {
+    font-family: "Righteous", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+  /* Log in page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous',sans-serif;
+}
+
+/* Header Styling */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
+    position: relative;
+}
+
+
+/* Wrapper Styles */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 0 60px #000;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* Form and Input Styles */
+h2 {
+    font-size: 2em;
+    color: #0e0e0e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    position: relative;
+    width: 320px;
+    margin: 15px 0;
+}
+
+.input-group input {
+    width: 100%;
+    height: 40px;
+    font-size: 1em;
+    color: #050505;
+    padding: 0 10px 0 35px;
+    background: transparent;
+    border: 1px solid #0a0a0a;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-group input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.input-group .icon {
+    position: absolute;
+    display: block;
+    left: 10px;
+    color: #000000;
+    font-size: 1.2em;
+    line-height: 45px;
+}
+
+/* Forgot Password Link */
+.forgot-pass {
+    margin: -15px 0 15px;
+    text-align: right;
+    width: 320px;
+}
+
+.forgot-pass a {
+    color: #db7c7c;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+.forgot-pass a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styles */
+.btn {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: #db7c7c;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: #ff9a9a;
+    color: #d19090;
+}
+
+/* Sign-Up Link */
+.sign-link {
+    font-size: 0.9em;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.sign-link p {
+    color: #000000;
+}
+
+.sign-link p a {
+    color: #db7c7c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sign-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustment */
+@media screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .header-container .title {
+        margin-top: 10px;
+    }
+
+    .wrapper {
+        width: 90%;
+        height: auto;
+        padding: 30px;
+    }
+}
+
